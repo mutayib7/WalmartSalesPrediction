@@ -27,11 +27,21 @@ Predict Weekly sales for Walmart stores based on historical sales data,store inf
   ○ LightGBM: 2685704
 - Best Model: XGBoost Regressor
 - Holiday Weeks showed the highest sales spikes
-- Lag features and rolling averages were the most impactful predictors 
- 
-## How to Run
-pip install -r requirements.txt
-Open SalesPrediction.ipynb and run all cells.
+- Lag features and rolling averages were the most impactful predictors
+  
+## API Deployment
+- A FastAPI endpoint serves the trained XGBoost model for real-time sales predictions.
+
+### Run API locally
+- uvicorn app:app --reload
+- Visit `http://127.0.0.1:8000/docs` for interactive Swagger UI testing.
+
+### Notes & Limitations
+- The `/predict` endpoint currently requires precomputed lag and rolling-mean features as input
+
+## How to Run Notebook
+- pip install -r requirements.txt
+- Open SalesPrediction.ipynb and run all cells.
 
 ## Tech Stack
-Python, scikit-learn, XGBoost, Prophet, LightGBM, numpy, pandas, matplotlib, seaborn
+- Python, scikit-learn, XGBoost, Prophet, LightGBM, numpy, pandas, matplotlib, seaborn, fastAPI, uvicorn, pydantic, joblib
