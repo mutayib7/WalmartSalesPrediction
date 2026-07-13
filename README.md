@@ -43,5 +43,10 @@ Predict Weekly sales for Walmart stores based on historical sales data,store inf
 - pip install -r requirements.txt
 - Open SalesPrediction.ipynb and run all cells.
 
+## Run with Docker
+- docker build -t walmart-sales-api .
+- docker run -d -p 8000:8000 walmart-sales-api
+- Visit `http://127.0.0.1:8000/docs` 
+
 ## Tech Stack
 - Python, scikit-learn, XGBoost, Prophet, LightGBM, numpy, pandas, matplotlib, seaborn, fastAPI, uvicorn, pydantic, joblib
