@@ -3,6 +3,9 @@
 ## Problem Statement
 Predict Weekly sales for Walmart stores based on historical sales data,store information and external factor holiday.
 
+## Live Demo on Render
+- **[Try the API here:](https://walmart-sales-prediction-api.onrender.com/docs)**
+
 ## Dataset 
 - Walmart Store Sales dataset
 - 421570 samples, 5 features
